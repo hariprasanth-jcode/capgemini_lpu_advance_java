@@ -1,0 +1,59 @@
+package com.product_hibernate;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+//ctrl+shift+o
+public class ProductDaoTest {
+
+	
+	//EMF
+	//EM
+	//ET
+	
+	static EntityManagerFactory emf;
+	
+	EntityManager em;
+	
+	@BeforeAll
+	public static void initEmf() {
+	 System.out.println("init Emf"); 
+	 emf=Persistence.createEntityManagerFactory("postgres");
+	}
+	
+	@BeforeEach
+	public void initEm() {
+		em=emf.createEntityManager();
+	}
+	
+	@Test
+	public void insertProductTest() {
+	System.out.println("Product Insert");
+//		ProductDao dao=new ProductDao();
+//		Product product =new Product();
+//		product.setId(3);
+//		product.setName("Pencil");
+//		product.setPrice(5);
+//		dao.insertProduct(product);
+	}
+	
+	@Test
+	public void findByIdTest() {
+		System.out.println("Product Find");
+//		ProductDao dao=new ProductDao();
+//		Product p=dao.findById(100);
+//		assertNotNull(p);
+	}
+	
+	@AfterAll
+	public static void destroyEmf() {//close
+		emf.close();
+	}
+	
+	
+}

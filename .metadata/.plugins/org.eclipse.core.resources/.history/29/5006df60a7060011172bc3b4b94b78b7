@@ -1,0 +1,35 @@
+package com.basic_hibernate;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+
+public class EmployeeDaoTest {
+
+	EntityManagerFactory emf;
+	
+	EntityManager em;
+	@BeforeAll
+	public void init() {
+	emf= Persistence.createEntityManagerFactory("postgres");
+	}
+	
+	@BeforeEach
+	public void initEm() {
+		em=emf.createEntityManager();
+	}
+	
+	@AfterEach
+	public void destroyEm() {
+		em.close();
+	}
+	
+	public void destroyEmf() {
+		emf.close();
+	}
+}

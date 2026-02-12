@@ -1,0 +1,7 @@
+
+
+public class Snippet {
+	public double add(int a,int b) {
+			return a+b;
+		}
+}

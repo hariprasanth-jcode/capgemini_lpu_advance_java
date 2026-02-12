@@ -1,0 +1,9 @@
+package com.prac;
+
+public class Employee {
+
+	int id;
+	String name;
+	int age;
+	String branch;
+}

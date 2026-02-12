@@ -1,0 +1,40 @@
+package com.basic_hibernate;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import org.junit.jupiter.api.Test;
+
+public class CalculatorTest {
+
+	
+	
+	@Test
+	public void addTest() {
+		Calculator c=new Calculator();
+		assertEquals(30,c.add(40,-10));
+	}
+	
+	@Test
+	public void subTest() {
+		Calculator c=new Calculator();
+		assertEquals(30,c.sub(40,10));
+	}
+	
+	@Test
+	public void divTest() {
+		Calculator c=new Calculator();
+		assertEquals(2,c.divide(4,2));
+	}
+	
+	@Test
+	public void divTestZero() {
+		Calculator c=new Calculator();
+		//assertThrows(IllegalArgumentException.class,()->c.divide(10, 0));
+	}
+	
+	@Test
+	void constructorTest() {
+	    new Calculator();
+	}
+}

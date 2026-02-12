@@ -1,0 +1,10 @@
+package com.basic_hibernate;
+
+public class Employee {
+
+	
+	int id;
+	String name;
+	double salary;
+	String branch;
+}

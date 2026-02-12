@@ -1,0 +1,71 @@
+package com.product_hibernate;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import com.product.Calculator;
+import com.product.EvenOrOdd;
+
+public class CalculatorTest {
+
+	
+	
+	//@Test
+	public void divideTest() {
+		
+		Calculator c=new Calculator();
+		
+		int actualRes = c.divide(10, 2);
+		
+		assertEquals(5, actualRes);
+	}
+	
+	//@Test
+	public void divideTestZero() {
+      Calculator c=new Calculator();
+		
+		int actualRes = c.divide(10, 0);
+		
+		assertEquals(0, actualRes);
+	}
+	
+
+	//@ParameterizedTest
+	//@ValueSource(strings= {"aba","tenet","racecar","radar","apple"})
+	public void testIsPalindrome(String str) {
+		 Calculator c=new Calculator();
+		 
+		 assertTrue(c.palindrome(str));
+	}
+	
+	//@ParameterizedTest
+	//@ValueSource(ints= {1,2,3,4,-5})
+	public void testIsPositiveNumber(int num) {
+		Calculator c=new Calculator();
+		assertTrue(c.positive(num));
+	}
+	
+	//@ParameterizedTest
+	//@CsvFileSource(resources="/data.csv",numLinesToSkip = 1)
+	public void testEvenOrOdd(String input,String expected) {
+		EvenOrOdd eoo=new EvenOrOdd();
+		String actual=eoo.evenOrOdd(Integer.parseInt(input));
+		assertEquals(expected, actual);
+	}
+	
+	@ParameterizedTest
+	@CsvSource({
+		"1,2,3",
+		"5,5,9"
+	})
+	void testAdd(int a,int b,int expectedResult) {
+		
+		assertEquals(expectedResult, new Calculator().add(a, b));
+	}
+}

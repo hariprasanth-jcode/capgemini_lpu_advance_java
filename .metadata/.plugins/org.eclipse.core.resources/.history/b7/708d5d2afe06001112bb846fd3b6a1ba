@@ -1,0 +1,9 @@
+package com.product;
+
+public class ProductDao {
+	
+	public void insertProduct(Product p) {
+		
+	}
+
+}

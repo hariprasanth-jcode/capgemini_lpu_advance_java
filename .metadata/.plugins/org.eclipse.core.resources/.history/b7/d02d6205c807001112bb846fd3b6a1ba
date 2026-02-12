@@ -1,0 +1,12 @@
+package com.connectdatabase;
+
+public class Program {
+	
+	
+	public boolean isPalindrome(String str) {
+		
+		
+		StringBuilder s=new StringBuilder(str);
+	}
+
+}

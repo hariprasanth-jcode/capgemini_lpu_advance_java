@@ -1,0 +1,30 @@
+package com.connectdatabase;
+
+import java.sql.DriverManager;
+
+public class SteptoConnectDataBase {
+
+	
+	
+	public static void main(String[] args) {
+		// Load the driver class
+		
+		String url="jdbc:postgresql://localhost:5432/college";
+		String un="postgres";
+		String pwd="root";
+		
+		try {
+			Class.forName("org.postgresql.Driver");
+			
+	    //To establish Connection
+			
+			DriverManager.getConnection()
+			
+			System.out.println("Class loaded");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

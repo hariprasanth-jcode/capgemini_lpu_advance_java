@@ -1,0 +1,40 @@
+package com.product;
+
+public class Calculator {
+
+	
+	public int add(int a,int b) {
+		return a+b;
+	}
+	
+	public int divide(int a,int b) {
+		if(b==0) {
+			return 0;
+		}
+		
+		return a/b;
+	}
+	
+	public boolean palindrome(String str) {
+		
+		String res="";
+		
+		for(int i=str.length()-1;i>=0;i--) {
+			res=res+str.charAt(i);
+		}
+		
+		if(res.equals(str)) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	
+	public boolean positive(int a) {
+		if(a>0) {
+			return true;
+		}
+		return false;
+	}
+}
