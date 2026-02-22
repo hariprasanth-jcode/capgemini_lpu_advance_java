@@ -1,6 +1,6 @@
 # Capgemini LPU Advanced Java
 
-A comprehensive learning repository showcasing advanced Java concepts and enterprise technologies covered in the Capgemini LPU (Learning Platform University) Advanced Java program.
+A comprehensive learning repository showcasing advanced Java concepts and enterprise technologies covered in the Capgemini LPU  Advanced Java program.
 
 ## 📚 Project Overview
 
@@ -120,18 +120,3 @@ After exploring this repository, you will understand:
 - How to write testable code with proper mocking strategies
 - Enterprise Java development best practices
 
-## 🤝 Contributing
-
-Feel free to fork this repository and submit pull requests with improvements, additional examples, or corrections.
-
-## 📄 License
-
-This project is provided for educational purposes as part of the Capgemini LPU program.
-
-## 📞 Contact
-
-For questions or clarifications regarding the content, please reach out through GitHub issues.
-
----
-
-**Happy Learning! 🎓**
