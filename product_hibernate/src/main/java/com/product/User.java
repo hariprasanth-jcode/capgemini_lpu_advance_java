@@ -9,10 +9,10 @@ public class User {
 		
 		Product p=new Product();
 		
-		p.setId(1);
-		p.setName("Pen");
-		p.setPrice(10);
-		p.setQuantity(10);
+		p.setId(5);
+		p.setName("Biscuit");
+		p.setPrice(20);
+		p.setQuantity(30);
 		
 		dao.insertProduct(p);
 	}

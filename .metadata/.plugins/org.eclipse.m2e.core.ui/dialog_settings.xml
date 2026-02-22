@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/Users/hariprasanth/Documents/capgemini_advance_java/manytooneprac/src/main/java/com/manytooneprac/Department.java"/>
+			<item value="/Users/hariprasanth/Documents/capgemini_advance_java/onetomany/src/main/java/com/prac/Main1.java"/>
 			<item value="/Users/hariprasanth/Documents/capgemini_advance_java/basic_hibernate/src/main/java/com/basic_hibernate/Employee.java"/>
 			<item value="/Users/hariprasanth/Documents/capgemini_advance_java/hibernate_basics/src/main/java/com/practice"/>
 			<item value="/Users/hariprasanth/Documents/capgemini_advance_java/learnjdbc/src/main/java/com/connectdatabase/ToReadData.java"/>
@@ -53,6 +55,14 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="onetoonebidirectionalmapping"/>
+			<item value="manytomany"/>
+			<item value="manytooneprac"/>
+			<item value="onetomany"/>
+			<item value="mockito"/>
+			<item value="pracmockito"/>
+			<item value="mockitoPrac"/>
+			<item value="onetoonemapping"/>
 			<item value="product_hibernate"/>
 			<item value="basic_hibernate"/>
 			<item value="hibernate_basics"/>
