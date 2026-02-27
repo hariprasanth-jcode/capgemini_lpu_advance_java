@@ -18,10 +18,8 @@ public class User {
 				.getTransaction();
 		
 		Car c=em.find(Car.class, 1);
-		
 		System.out.println("====================");
 		em.clear();
-		
 		Car c1=em.find(Car.class, 1);
 		
 		

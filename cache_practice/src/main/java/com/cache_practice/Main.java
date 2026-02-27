@@ -8,7 +8,7 @@ import javax.persistence.Persistence;
 public class Main {
 	public static void main(String[] args) {
 		
-		insert();
+		read();
 		
 		
 	}
@@ -21,36 +21,34 @@ public class Main {
 		EntityTransaction et = em.getTransaction();
 		
 		Product p=new Product();
-		p.setName("Bottle");
 		
+		p.setId(2);
+		p.setName("Pen");
 		et.begin();
 		em.persist(p);
 		et.commit();
 	}
 	
+	
 	public static void read() 
 	{
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
+	    
+		EntityManager em1 = emf.createEntityManager();
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
-
-//        System.out.println("---- First EntityManager ----");
-//        EntityManager em1 = emf.createEntityManager();
-//        Product p1 = em1.find(Product.class, 1); // DB hit
-     
-        //em1.close();
-
-        System.out.println("---- Second EntityManager ----");
-       EntityManager em2 = emf.createEntityManager();
-        Product p2 = em2.find(Product.class, 1);
-        
-        p2.setName("Pencil");
-         // From 2nd-level cache
-        em2.getTransaction().begin();
-        em2.persist(p2);
-        em2.getTransaction().commit();
-        em2.close();
-
-        emf.close();
+		EntityTransaction et = em1.getTransaction();
 		
+		System.out.println("=====First cache=============");
+		Product p1=em1.find(Product.class, 1);
+		System.out.println(p1.getName());
+		
+		em1.close();
+		
+		System.out.println("=======Second cache============");
+		EntityManager em2 = emf.createEntityManager();
+		Product p2 = em2.find(Product.class, 1);
+		System.out.println(p2.getName());
+		em2.close();
+			
 	}
 }
